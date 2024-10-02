@@ -25,9 +25,9 @@ def selection(unsorted):
     return unsorted
 #insertion(list) > sorted list
 def insertion(unsorted):
-    for i in range(len(unsorted)):
+    for i in range(1,len(unsorted)):
         j=i
-        if j>0 and unsorted[j-1]>unsorted[j]:
+        while j>0 and unsorted[j-1]>unsorted[j]:
             unsorted[j-1],unsorted[j]=unsorted[j],unsorted[j-1]
             j=j-1
         
