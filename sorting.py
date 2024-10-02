@@ -13,9 +13,18 @@ def bubble(item):
            break
     return item
 #selection(list) -> sorted list
-
+def selection(unsorted):
+    for i in range(len(unsorted)-1):
+        small = i
+        for j in range(i+1, len(unsorted)):
+         if unsorted[j] < unsorted[small]:
+            small = j
+        temp = unsorted[i]
+        unsorted[i] = unsorted[small]
+        unsorted[small] = temp
+    return unsorted
 #insertion(list) > sorted list
-def insertionsort(unsorted):
+def insertion(unsorted):
     for i in range(len(unsorted)):
         j=i
         if j>0 and unsorted[j-1]>unsorted[j]:
